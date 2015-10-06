@@ -1,22 +1,20 @@
 (function ($) {
 	$.fn.emp = function (parameters) {
     	api_key = 'c8nwvfq5cn5dp3e27nm6udn7'
-    	$('#emp').append('<div class="form-group"><input class="form-control" placeholder="Tuner Name: ie. Stock, Cold Air, 93 Octane" name="tuner_name" type="text"></div>');
-    	$('#emp').append('<span id="">Select Year: </span> <select class="form-control" id="select_year" name="select_year" class="emp_select"></select><br />');
-    	$('#select_year').append('<option value="" disabled selected>Select Year</option>');
-    	$('#emp').append(' <span id="">Select Make: </span> <select class="form-control" id="select_make" name="select_make" class="emp_select"></select><br />');
-    	$('#select_make').append('<option value="" disabled selected>Select Make</option>');
-    	$('#emp').append(' <span id="">Select Model: </span> <select class="form-control" id="select_model" name="select_model" class="emp_select"></select><br />');
-    	$('#select_model').append('<option value="" disabled selected>Select Model</option>');
-    	$('#emp').append(' <span id="">Select Package: </span> <select class="form-control"  id="select_package" name="select_package" class="emp_select"></select><br />');
-    	$('#select_package').append('<option value="" disabled selected>Select Package</option>');
-		
+    	
 		while(parameters.end_year > parameters.start_year - 1){
 			$('#select_year').append('<option value="'+parameters.end_year+'">'+parameters.end_year+'</option>');
 			parameters.end_year --;
 		}
+		$('#tuner_name').keyup(function(){
+			valid_form();
+		});
+		$('#select_package').change(function(){
+			valid_form();
+		});
 		
 		$('#select_model').change(function(){
+			valid_form();
 			$('#select_package').val('').empty();
 			$('#select_package').append('<option value="" disabled selected>Select Package</option>');
 			$.ajax({			
@@ -42,6 +40,7 @@
 		});
 		
 		$('#select_make').change(function(){
+			valid_form();
 			$('#select_model').val('').empty();
 			$('#select_model').append('<option value="" disabled selected>Select Model</option>');
 			$('#select_package').val('').empty();
@@ -66,6 +65,9 @@
 		});
 		
 		$('#select_year').change(function(){
+			
+			valid_form();
+			$('#fileuploadbutton').prop('disabled', true);
 			$('#select_make').val('').empty();
 			$('#select_make').append('<option value="" disabled selected>Select Make</option>');
 			$('#select_model').val('').empty();
@@ -95,9 +97,17 @@
 		$('#save_vehicle').click(function(){
 			alert('Vehicle Saved');
 		});
-		$('#openBtn').click(function(){
-			$('#myModal').modal({show:true})
-		});
+		
+		function valid_form(){
+			if (($('#tuner_name').val()) && ($('#select_year').val()) && ($('#select_make').val()) && ($('#select_model').val()) && ($('#select_package').val())){
+				$('#fileuploadbutton').prop('disabled', false); 
+			}
+			else{
+				$('#fileuploadbutton').prop('disabled', true); 
+			}
+		}
+		
+		
 		
 	};
 }(jQuery));

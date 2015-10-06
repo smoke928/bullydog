@@ -23,9 +23,6 @@
     <!-- Custom CSS -->
     <link href="../../../assets/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="../../../assets/css/morris.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="../../../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 

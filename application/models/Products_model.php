@@ -17,3 +17,4 @@ class Products_model extends CI_Model {
 		}
 		
 }
+?>
