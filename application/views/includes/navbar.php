@@ -1,5 +1,4 @@
-<!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -9,89 +8,55 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img id="nav_bar_logo" class="visible-sm visible-xs" src="../../../assets/images/bullydog_logo_small.png"></a>
-                <a class="navbar-brand" href="/"><img id="nav_bar_logo" class="visible-lg visible-md" src="../../../assets/images/bullydog_logo_med.png"></a>
+                <a class="navbar-brand" href="http://www.sctflash.com"><img src="../../../assets/images/logo_small.png" /></a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
-	                        <ul class="dropdown-menu">
-	                            <li>
-	                                <a href="/bigrig/categories">Big Rig</a>
-	                            </li>
-	                            <li>
-	                                <a href="/lightduty/products">Car/Truck</a>
-	                            </li>
-	                            
-	                        </ul>
-                    </li>
-                    <li>
-                        <a href="services.html">Services</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-item.html">Single Portfolio Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="blog-home-1.html">Blog Home 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-home-2.html">Blog Home 2</a>
-                            </li>
-                            <li>
-                                <a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="full-width.html">Full Width Page</a>
-                            </li>
-                            <li>
-                                <a href="sidebar.html">Sidebar Page</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                            <li>
-                                <a href="pricing.html">Pricing Table</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <div style="height:25px;background-color:red">
-        </div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="http://www.sctflash.com">Home <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products<span class="caret"></span></a>						
+						
+						<ul class="dropdown-menu">
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">SCT X4 Power Flash</a></li>
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Livewire TS+</a></li>
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">SCT ITSX / TSX for Android</a></li>
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">SCT Economizer Programmer</a></li>
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">SCT Switch Chips</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Tech Support</a></li>
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Become a Dealer</a></li>
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Customers</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Tech Support</a></li>
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Become a Dealer</a></li>
+							<li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Customers</a></li>
+						</ul>
+					</li>
+					
+					
+				</ul>
+				<form class="navbar-form navbar-right" role="search">
+					
+					<a data-toggle="modal" href="#myModal" class="btn btn-primary">Select Vehicle</a>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					
+				</ul>
+			</div><!-- /.navbar-collapse -->
+            
         <!-- /.container -->
     </nav>
+
+

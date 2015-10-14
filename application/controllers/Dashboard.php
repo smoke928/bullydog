@@ -14,7 +14,7 @@ class Dashboard extends CI_Controller {
 	{
 		if (!$this->ion_auth->logged_in())
 		{
-			redirect('auth/login');
+			redirect('/auth/login');
 		}
 		$this->load->view('includes/dashboard_header');
 		$this->load->view('includes/dashboard_navbar');
@@ -48,7 +48,7 @@ class Dashboard extends CI_Controller {
 		{
 			redirect('auth/login');
 		}
-		$data['users'] = $this->ion_auth->get_users();
+		$data['users'] = $this->ion_auth->users()->result();
 		$this->load->view('includes/dashboard_header');
 		$this->load->view('includes/dashboard_navbar');
 		$this->load->view('dashboard/user_list' ,$data);
@@ -62,7 +62,7 @@ class Dashboard extends CI_Controller {
 		{
 			redirect('auth/login');
 		}
-		$data['user'] = $this->ion_auth->get_user($id);
+		$data['user'] = $this->ion_auth->user($id)->row();
 		$this->load->view('includes/dashboard_header');
 		$this->load->view('includes/dashboard_navbar');
 		$this->load->view('dashboard/edit_user' ,$data);

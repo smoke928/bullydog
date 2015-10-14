@@ -64,7 +64,7 @@ class Auth extends CI_Controller {
 				//if the login is successful
 				//redirect them back to the home page
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
-				redirect('/dashboard', 'refresh');
+				redirect('/', 'refresh');
 			}
 			else
 			{
@@ -89,10 +89,8 @@ class Auth extends CI_Controller {
 				'id'   => 'password',
 				'type' => 'password',
 			);
-			$this->load->view('includes/dashboard_header');
-			$this->load->view('auth/login', $this->data);
-			$this->load->view('includes/dashboard_footer');
-			
+
+			$this->_render_page('auth/login', $this->data);
 		}
 	}
 
@@ -208,10 +206,7 @@ class Auth extends CI_Controller {
 
 			// set any errors and display the form
 			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-			$this->load->view('includes/dashboard_header');
-			$this->load->view('auth/forgot_password', $this->data);
-			$this->load->view('includes/dashboard_footer');
-			
+			$this->_render_page('auth/forgot_password', $this->data);
 		}
 		else
 		{
@@ -671,11 +666,8 @@ class Auth extends CI_Controller {
 			'id'   => 'password_confirm',
 			'type' => 'password'
 		);
-		$this->load->view('includes/dashboard_header');
-		$this->load->view('includes/dashboard_navbar');
-		$this->load->view('auth/edit_user', $this->data);
-		$this->load->view('includes/dashboard_footer');
-		
+
+		$this->_render_page('auth/edit_user', $this->data);
 	}
 
 	// create a new group

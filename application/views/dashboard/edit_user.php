@@ -12,7 +12,7 @@
         </div>
         <div class="alert alert-info alert-dismissable fade in" style="display: none; ">
         	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			This tool is to upload a Dyno data sheets to supply data for the DTR Dyno Charts. The data sheets are generated using the "" Application or the "" Application
+			Edit the user's information.
 		</div>
 		<div class="row">
         
@@ -20,7 +20,7 @@
                 <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Hover Rows
+                            
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -66,6 +66,14 @@
                                         </td>
                                         <td>
                                         	<input type="email" class="form-control" required value="<?=$user->email;?>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        	Password
+                                        </td>
+                                        <td>
+                                        	<input type="text" class="form-control" required value="<?=$user->password;?>">
                                         </td>
                                     </tr>
                             	</table>

@@ -65,10 +65,10 @@
                                             	<?=$user->username;?>
                                             </td>
                                             <td>
-                                            	<?=$user->group_id;?>
+                                            	<?=$user->id;?>
                                             </td>
                                             <td>
-                                            	<a href="/dashboard/edit_user/<?=$user->id;?>"><button type="button" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i>
+                                            	<a href="/auth/edit_user/<?=$user->id;?>"><button type="button" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i>
                             					</button></a>
                                             	<button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i>
                             					</button>

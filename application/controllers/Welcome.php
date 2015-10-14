@@ -23,6 +23,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('includes/header');
 		$this->load->view('includes/navbar');
 		$this->load->view('includes/slider');
+		$this->load->view('includes/vehicle_select_modal');
 		$this->load->view('home');
 		$this->load->view('includes/footer');
 	}
