@@ -16,7 +16,7 @@
 		</div>
 		<div class="row">
             <div class="col-md-4">
-                <button type="button" class="btn btn-outline btn-primary btn-lg btn-block">Add New User</button>
+                <a href="/auth/create_user"><button type="button" class="btn btn-outline btn-primary btn-lg btn-block">Add New User</button></a>
             </div>
             <div class="col-md-4">
                 <div class="input-group custom-search-form">
@@ -70,8 +70,8 @@
                                             <td>
                                             	<a href="/auth/edit_user/<?=$user->id;?>"><button type="button" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i>
                             					</button></a>
-                                            	<button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i>
-                            					</button>
+                                            	<a href="/auth/deactivate/<?=$user->id;?>"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i>
+                            					</button></a>
                             				</td>
                                         </tr>
                                         <?php endforeach; ?>
@@ -86,10 +86,10 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-6 -->
-                
-                
             </div>
         <!-- /.row -->
+        </div>
+    </div>
         
         <script>
 		$(document).ready(function()

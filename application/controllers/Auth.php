@@ -388,7 +388,11 @@ class Auth extends CI_Controller {
 			$this->data['csrf'] = $this->_get_csrf_nonce();
 			$this->data['user'] = $this->ion_auth->user($id)->row();
 
+			$this->load->view('includes/dashboard_header');
+			$this->load->view('includes/dashboard_navbar');
 			$this->_render_page('auth/deactivate_user', $this->data);
+			$this->load->view('includes/dashboard_footer');
+			
 		}
 		else
 		{
@@ -519,8 +523,11 @@ class Auth extends CI_Controller {
                 'type'  => 'password',
                 'value' => $this->form_validation->set_value('password_confirm'),
             );
-
-            $this->_render_page('auth/create_user', $this->data);
+			$this->load->view('includes/dashboard_header');
+			$this->load->view('includes/dashboard_navbar');
+			$this->load->view('auth/create_user', $this->data);
+			$this->load->view('includes/dashboard_footer');
+            
         }
     }
 

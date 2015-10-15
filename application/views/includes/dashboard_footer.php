@@ -1,5 +1,5 @@
 					<div class="panel-footer">
-                            
+                        The footer
                         <!-- /.panel-footer -->
                     </div>
                     <!-- /.panel .chat-panel -->
@@ -9,8 +9,8 @@
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
-
-    </div>
+	</div>
+    
     <!-- /#wrapper -->
 
     <!-- Bootstrap Core JavaScript -->
